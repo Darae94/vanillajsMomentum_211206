@@ -5,7 +5,16 @@ const title = document.querySelector(".hello h1");
 
 function handleTitleClick() {
     this.style.color = "blue";
-    console.log("title was clicked!");
 }
-console.dir(title);
+
+function handleMouseEnter() {
+    this.innerText = "Mouse is here!";
+}
+
+function handleMouseLeave() {
+    this.innerText = "Mouse is gone!";
+}
+
 title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
