@@ -4,38 +4,13 @@
 const h1 = document.querySelector(".hello h1");
 
 function handleTitleClick() {
-    this.style.color = "blue";
+    const currentColor = this.style.color;
+    let newColor;
+    if(currentColor === "blue") {
+        newColor = "tomato";
+    } else {
+        newColor = "blue";
+    }
+    this.style.color = newColor;
 }
-
-function handleMouseEnter() {
-    this.innerText = "Mouse is here!";
-}
-
-function handleMouseLeave() {
-    this.innerText = "Mouse is gone!";
-}
-
-function handleWindowResize() {
-    document.body.style.backgroundColor = "tomato";
-}
-
-function handleWindowCopy() {
-    alert("copier!");
-}
-
-function handelWindowOffline() {
-    alert("SOS no WIFI");
-}
-
-function handelWindowOnline() {
-    alert("ALL GOOOD");
-}
-
 h1.addEventListener("click", handleTitleClick);
-h1.addEventListener("mouseenter", handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseLeave);
-
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
-window.addEventListener("offline", handelWindowOffline);
-window.addEventListener("online", handelWindowOnline);
