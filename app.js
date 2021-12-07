@@ -3,4 +3,9 @@
 // querySelectorAll(".hello h1") > 배열로 해당 태그 정보를 가져옴
 const title = document.querySelector(".hello h1");
 
-title.innerText = "hello!";
+function handleTitleClick() {
+    this.style.color = "blue";
+    console.log("title was clicked!");
+}
+console.dir(title);
+title.addEventListener("click", handleTitleClick);
