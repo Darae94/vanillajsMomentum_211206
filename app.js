@@ -1,22 +1,17 @@
-// form submit 새로고침(기본 동작)
-// a href 해당 주소로 이동(기본 동작)
-// 브라우저가 이벤트발생 시 onLoginSubmit(info) 실행 - info 는 이벤트 관련 정보
-// function({information about the event that just happened})
-// => 방금 일어난 이벤트에 대한 정보 제공
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const link = document.querySelector("a");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
 
 function onLoginSubmit(event) {
     event.preventDefault();
-    console.log(loginInput.value);
-}
-
-function handleLinkClick(event) {
-    event.preventDefault();
-    console.dir(event);
-    console.log(event);
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    // 새로운 방식 : `` 안에 ${변수명}을 사용하면 기존에 문자열 합치는 것과 같은 역할을 함
+    // `Hello ${username}` === "Hello " + username;
+    greeting.innerHTML = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click", handleLinkClick);
