@@ -4,4 +4,6 @@ function sayHello() {
     console.log("hello");
 }
 
-setInterval(sayHello, 5000);
+// setInterval -> 5초 마다 반복
+// setTimeout -> 5초 뒤 동작
+setTimeout(sayHello, 5000);
