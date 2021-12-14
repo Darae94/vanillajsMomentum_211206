@@ -4,7 +4,7 @@ const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
 
-const toDos = [];
+let toDos = [];
 
 function saveToDos() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
@@ -20,7 +20,7 @@ function paintToDo(newTodo) {
     const span = document.createElement("span");
     span.innerHTML = newTodo;
     const button = document.createElement("button");
-    button.innerHTML = "X";
+    button.innerHTML = "❌";
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
@@ -40,13 +40,8 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-if(savedToDos !== null) {
+if(savedToDos !== null) { // todo 리스트 내용이 있으면
     const parsedToDos = JSON.parse(savedToDos);
-    parsedToDos.forEach((item) => console.log("this is the turn of", item));
+    toDos = parsedToDos; // 저장된값도 불러와서 사용
+    parsedToDos.forEach(paintToDo); // 저장된 값 보여주기
 }
-
-// 두가지는 같은 역할을 함!!
-// (item) => console.log("this is the turn of", item)
-// function sayHello(item) {
-//     console.log("this is the turn of", item)
-// }
