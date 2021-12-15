@@ -12,8 +12,10 @@ function saveToDos() {
 
 function deleteToDo(event) {
     const li = event.target.parentElement;
-    console.log(li.id);
     li.remove();
+    // 해당하는 아이디 빼고 목록 출력
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos(); // 제외된 목록 저장
 }
 
 function paintToDo(newTodo) {
@@ -51,14 +53,3 @@ if(savedToDos !== null) { // todo 리스트 내용이 있으면
     toDos = parsedToDos; // 저장된값도 불러와서 사용
     parsedToDos.forEach(paintToDo); // 저장된 값 보여주기
 }
-
-function sexyFilter() {
-
-}
-
-// [1, 2, 3, 4].filter(sexyFilter)
-// return true의 경우 해당 값 유지
-// sexyFilter(1) = 1
-// sexyFilter(2) = 2
-// sexyFilter(3) x
-// sexyFilter(4) = 4
