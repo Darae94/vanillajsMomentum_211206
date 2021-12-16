@@ -3,3 +3,7 @@
 * html, js 활용하여 요소 구성
 * css - flex 사용
 * openweader Api 사용
+
+---------------------
+
+https://darae94.github.io/vanillajsMomentum_211206/
