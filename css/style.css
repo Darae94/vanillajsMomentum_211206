@@ -1,3 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 0 0 3px #3338;
+}
+
+#clock {
+    font-size: 10em;
+}
+
+#login-form input {
+    appearance: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    border-bottom: 3px solid white;
+    margin-bottom: 20px;
+    color:white;
+}
+
+#login-form input:hover, #login-form input:focus {
+    outline: none;
+}
+
+#login-form input::placeholder {
+    color:rgba(255, 255, 255, 0.8);
+}
+
+#greeting {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#todo-form input {
+    appearance: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    color:white;
+}
+
+#todo-form input:hover, #todo-form input:focus {
+    outline: none;
+}
+
+#todo-form input::placeholder {
+    color:white;
+}
+
+#todo-list {
+    font-size: 1.5em;
+    list-style: none;
+}
+
+#todo-list button {
+    margin-right: 10px;
+}
+
+#quote {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0.8;
+    font-style: italic;
+    font-size: .75em;
+}
+
+#weather {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: .8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#weather .weatherInfo {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
 .hidden {
     display: none;
 }
