@@ -4,7 +4,7 @@ const quotes = [
         author: "Walt Disney",
     },
     {
-        quote: "Life is what happens when you're busy making other plane.",
+        quote: "Life is what happens when you're busy making other plans.",
         author: "John Lennon",
     },
     {
@@ -16,7 +16,7 @@ const quotes = [
         author: "Helen Keller",
     },
     {
-        quote: "Tp Travel is to Live",
+        quote: "To Travel is to Live",
         author: "Hans Christian Andersen",
     },
     {
